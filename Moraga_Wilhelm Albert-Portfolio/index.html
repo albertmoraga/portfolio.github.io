@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>I'm Albert <span>Moraga</span></h1>
+                <p>Welcome to my Portfolio</p>
+            </div>
+            <!---------------about----------------------------->
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/about.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1>About me</h1>
+                            <p>Hello everyone I'm Albert moraga and I'm 19 years old I live in Cabreros Street Basak San Nicolas and my hobbies is watching movies</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="Skills">
+                                <ul>
+                                    <li><span>Programmer</span><br>Programmer</li>
+                                </ul>
+                            </u1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------Services--------------------------------->
+            <div id="services">
+                <div class="container">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="Services-list">
+                        <div>
+                            <h2>Community Service</h2>
+                            <p>I'm volunteering to help my community.</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------Contacts---------------------->
+            <div id="Contact">
+                <div class="containet">
+                    <div class="row">
+                        <div class="coltact-left">
+                            <h1 class="sub-title">Contact me</h1>
+                            <p>albertmoraga14@gmail.com</p>
+                            <p>09669123427</p>
+                            </div>
+                        </div>
+                        <div class="coltact-Right"></div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classlist.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classlist.remove("active-tab");
+                    }
+                    event.currentTarget.classlist.add("active-link");
+                    document.geteElementByid(tabname).classList.add("active-tab");
+                }
+            </script>
+    </body>
+    </html>
